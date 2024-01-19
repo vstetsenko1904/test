@@ -4,21 +4,20 @@ include mixins.pug
     img.logo-component__img(src="../src/images/logo.svg", height="37", width="37" alt="Dashboard")
     span.logo-component__text Dashboard
     span.logo-component__version v.01
-nav
+nav.navigation
     ul
-        li Dashboard
+        li.navigation__item Dashboard
             +icon('key-square')
-        li Product
+        li.navigation__item Product
             +icon('3d-square')
-        li Customers
+        li.navigation__item Customers
             +icon('user-square')
-        li Income
+        li.navigation__item Income
             +icon('wallet-money')
-        li Promote
+        li.navigation__item Promote
             +icon('discount-shape')
-        li Help
+        li.navigation__item Help
             +icon('message-question')
-
 .user-info
     img.user-info__avatar(src="../src/images/avatar.png", alt="")
     .user-info__name Evano
