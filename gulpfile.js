@@ -31,7 +31,7 @@ gulp.task('svg', function(done) {
     // remove all fill and style declarations in out shapes
     .pipe(cheerio({
         run: function ($) {
-            $('[fill]').removeAttr('fill');
+            //$('[fill]').removeAttr('fill');
             //$('[style]').removeAttr('style');
         },
         parserOptions: { xmlMode: true }
@@ -47,23 +47,6 @@ gulp.task('svg', function(done) {
         }
     }))
     .pipe(gulp.dest('dist/images/svg/'));
-});
-
-gulp.task('svgSpriteSass', function () {
-    return gulp.src(assetsDir + 'i/icons/*.svg')
-        .pipe(svgSprite({
-                preview: false,
-                selector: "icon-%f",
-                svg: {
-                    sprite: 'svg_sprite.html'
-                },
-                cssFile: '../sass/_svg_sprite.scss',
-                templates: {
-                    css: require("fs").readFileSync(assetsDir + 'sass/templates/_sprite-template.scss', "utf-8")
-                }
-            }
-        ))
-        .pipe(gulp.dest(assetsDir + 'i/'));
 });
 
 gulp.task('watch', function() {
