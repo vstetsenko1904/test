@@ -1,0 +1,19 @@
+include mixins.pug
+
+.logo-component
+    img.logo-component__img(src="../src/images/logo.svg", height="37", width="37" alt="Dashboard")
+    span.logo-component__text Dashboard
+    span.logo-component__version v.01
+nav
+    ul
+        li item 1 
+            +icon('3d-square', 'icon-3d-square')
+        li item 1
+        li item 1
+        li item 1
+        li item 1
+
+.user-info
+    img.user-info__avatar(src="../src/images/avatar.png", alt="")
+    .user-info__name Evano
+    .user-info__post Project Manager
