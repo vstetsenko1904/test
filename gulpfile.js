@@ -31,8 +31,9 @@ gulp.task('svg', function(done) {
     // remove all fill and style declarations in out shapes
     .pipe(cheerio({
         run: function ($) {
-            //$('[fill]').removeAttr('fill');
-            //$('[style]').removeAttr('style');
+            $('[fill]').removeAttr('fill');
+            $('[stroke]').removeAttr('stroke');
+            $('[style]').removeAttr('style');
         },
         parserOptions: { xmlMode: true }
     }))
