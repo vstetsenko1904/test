@@ -19,13 +19,25 @@ $navigation_link-active__background-color: $color-blue-1;
             display: flex;
             padding: $navigation_link__padding;
             color: $navigation_link--color;
+            line-height: 24px;
             font-size: 14px;
             font-weight: 500;
             letter-spacing: -.14px;
             border-radius: 8px;
+            transition: background-color .25s;
         }
 
-        &--active {
+        &:hover {
+            color: $color-black;
+        }
+
+        &:hover .icon {
+            fill: $color-black;
+            transition: fill .25s;
+        }
+
+        &--active,
+        &--active:hover {
             background-color: $navigation_link-active__background-color;
             color: $color-white;
         }
