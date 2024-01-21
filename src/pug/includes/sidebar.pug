@@ -1,13 +1,15 @@
 include mixins.pug
 
-.logo-component
-    img.logo-component__img(src="../src/images/logo.svg", height="37", width="37" alt="Dashboard")
-    span.logo-component__text Dashboard
-    span.logo-component__version v.01
+.logo.logo--sidebar-top
+    img.logo__img(src="../src/images/logo.svg", height="37", width="37" alt="Dashboard")
+    span.logo__text Dashboard
+    span.logo__version v.01
 nav.navigation
-    ul
-        li.navigation__item Dashboard
-            +icon('key-square')
+    ul.navigation__list
+        li.navigation__item 
+            a.navigation__link(href="", title="Dashboard")
+                +icon('key-square', 'navigation__icon')
+                span.navigation__text Dashboard
         li.navigation__item Product
             +icon('3d-square')
         li.navigation__item Customers

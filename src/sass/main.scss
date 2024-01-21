@@ -1,3 +1,19 @@
-@import "imports/reset";
-@import "imports/layout";
-@import "imports/components/navigation";
+// Global stylesheet where import all other stylesheets 
+
+// Variable
+@import "./variables/variables";
+
+// Mixins
+@import "./mixins/mixins";
+
+// Fonts
+@import "./fonts/fonts";
+
+// Base
+@import "./base/base"; 
+
+// Themes 
+@import "./themes/themes";
+
+// Components
+@import "./components/components";

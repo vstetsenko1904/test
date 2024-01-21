@@ -1,0 +1,41 @@
+// Navigation
+
+$navigation_link--padding: 11px;
+$navigation_link--color: $color-blue-2;
+
+.navigation {
+    &__list {
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        margin-bottom: 18px;
+    }
+
+    &__link {
+        & {
+            display: flex;
+            padding: $navigation_link--padding;
+            color: $navigation_link--color;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -.14px;
+        }
+
+        &::after {
+            content: '';
+            border-style: solid;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 14px;
+        fill: $navigation_link--color;
+    }
+}

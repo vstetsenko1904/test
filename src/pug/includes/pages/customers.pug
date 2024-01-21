@@ -1,0 +1,88 @@
+include ../mixins.pug
+
+section.main-section
+    .user-welcome Hello Evano 👋🏼,
+    .dashboard-container
+        h1 #{title}
+        .status.status--active Active Member
+        .search-control
+            form(action="#")
+                label(for="search")
+                    +icon('search')
+                input#search.search-control__input(type="text", name="search")
+
+        table.customers-table
+            thead
+                tr 
+                    th.customers-table__th Customer Name
+                    th.customers-table__th Company
+                    th.customers-table__th Phone Number
+                    th.customers-table__th Email
+                    th.customers-table__th Country
+                    th.customers-table__th Status
+            tbody
+                tr
+                    td.customers-table__td Jane Cooper
+                    td.customers-table__td Microsoft
+                    td.customers-table__td (225) 555-0118
+                    td.customers-table__td jane@microsoft.com
+                    td.customers-table__td United States
+                    td.customers-table__td
+                        button.button-status--active Active
+                tr
+                    td.customers-table__td Floyd Miles
+                    td.customers-table__td Yahoo
+                    td.customers-table__td (205) 555-0100
+                    td.customers-table__td floyd@yahoo.com
+                    td.customers-table__td Kiribati
+                    td.customers-table__td
+                        button.button-status--inactive Inactive
+                tr
+                    td.customers-table__td Ronald Richards
+                    td.customers-table__td Adobe
+                    td.customers-table__td (302) 555-0107
+                    td.customers-table__td ronald@adobe.com
+                    td.customers-table__td Israel
+                    td.customers-table__td
+                        button.button-status--inactive Inactive
+                tr
+                    td.customers-table__td Marvin McKinney
+                    td.customers-table__td Tesla
+                    td.customers-table__td (252) 555-0126
+                    td.customers-table__td marvin@tesla.com
+                    td.customers-table__td Iran
+                    td.customers-table__td
+                        button.button-status--active Active
+                tr
+                    td.customers-table__td Jane Cooper
+                    td.customers-table__td Microsoft
+                    td.customers-table__td (225) 555-0118
+                    td.customers-table__td jane@microsoft.com
+                    td.customers-table__td United States
+                    td.customers-table__td
+                        button.button-status--active Active
+                tr
+                    td.customers-table__td Floyd Miles
+                    td.customers-table__td Yahoo
+                    td.customers-table__td (205) 555-0100
+                    td.customers-table__td floyd@yahoo.com
+                    td.customers-table__td Kiribati
+                    td.customers-table__td
+                        button.button-status--inactive Inactive
+                tr
+                    td.customers-table__td Ronald Richards
+                    td.customers-table__td Adobe
+                    td.customers-table__td (302) 555-0107
+                    td.customers-table__td ronald@adobe.com
+                    td.customers-table__td Israel
+                    td.customers-table__td
+                        button.button-status--inactive Inactive
+                tr
+                    td.customers-table__td Marvin McKinney
+                    td.customers-table__td Tesla
+                    td.customers-table__td (252) 555-0126
+                    td.customers-table__td marvin@tesla.com
+                    td.customers-table__td Iran
+                    td.customers-table__td
+                        button.button-status--active Active
+        include ../pagination.pug

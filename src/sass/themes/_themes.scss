@@ -1,0 +1,30 @@
+.main {
+    height: 100%;
+    display: grid;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 306px auto;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    position: relative;
+    background: $color-white;
+    box-shadow: 0px 10px 60px 0px rgb(226, 236, 249, 0.50);
+    padding: 37px 28px;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 41px 95px 41px;
+    background: $color-gray-4;
+}
+
+.sidebar + .main-content {
+    padding-left: 71px;
+}
+
+.dashboard-container {
+    background: $color-white;
+    border-radius: 20px;
+    box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.50);
+}

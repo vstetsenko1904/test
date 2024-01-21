@@ -4,11 +4,14 @@ const pug = require('gulp-pug');
 const svgSprite = require('gulp-svg-sprite');
 const svgmin = require('gulp-svgmin');
 const cheerio = require('gulp-cheerio');
-const replace = require('gulp-replace')
+const replace = require('gulp-replace');
+const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function(done) {
     gulp.src('./src/sass/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/css'));
 });
 
