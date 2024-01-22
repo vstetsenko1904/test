@@ -6,85 +6,85 @@ section.main-section
         .dashboard-controls
             .heading-filter
                 h1.heading.heading--h1 #{title}
-                .status-filter Active Member
+                button.status-filter(type="button") Active Member
             .search-control
                 form(action="#")
                     label.search-control__label(for="search")
                         +icon('search', 'search-control__icon')
                     input#search.search-control__input(type="text", name="search", placeholder="Search")
 
-        table.customers-table
-            thead
-                tr 
-                    th.customers-table__th Customer Name
-                    th.customers-table__th Company
-                    th.customers-table__th Phone Number
-                    th.customers-table__th Email
-                    th.customers-table__th Country
-                    th.customers-table__th Status
-            tbody
+        table.dashboard-table
+            thead.dashboard-table__thead
                 tr
-                    td.customers-table__td Jane Cooper
-                    td.customers-table__td Microsoft
-                    td.customers-table__td (225) 555-0118
-                    td.customers-table__td jane@microsoft.com
-                    td.customers-table__td United States
-                    td.customers-table__td
-                        span.status--active Active
+                    th.dashboard-table__th Customer Name
+                    th.dashboard-table__th Company
+                    th.dashboard-table__th Phone Number
+                    th.dashboard-table__th Email
+                    th.dashboard-table__th Country
+                    th.dashboard-table__th Status
+            tbody.dashboard-table__tbody
                 tr
-                    td.customers-table__td Floyd Miles
-                    td.customers-table__td Yahoo
-                    td.customers-table__td (205) 555-0100
-                    td.customers-table__td floyd@yahoo.com
-                    td.customers-table__td Kiribati
-                    td.customers-table__td
-                        span.status--inactive Inactive
+                    td.dashboard-table__td Jane Cooper
+                    td.dashboard-table__td Microsoft
+                    td.dashboard-table__td (225) 555-0118
+                    td.dashboard-table__td jane@microsoft.com
+                    td.dashboard-table__td United States
+                    td.dashboard-table__td
+                        button.button-primary(type="button") Active
                 tr
-                    td.customers-table__td Ronald Richards
-                    td.customers-table__td Adobe
-                    td.customers-table__td (302) 555-0107
-                    td.customers-table__td ronald@adobe.com
-                    td.customers-table__td Israel
-                    td.customers-table__td
-                        span.status--inactive Inactive
+                    td.dashboard-table__td Floyd Miles
+                    td.dashboard-table__td Yahoo
+                    td.dashboard-table__td (205) 555-0100
+                    td.dashboard-table__td floyd@yahoo.com
+                    td.dashboard-table__td Kiribati
+                    td.dashboard-table__td
+                        button.button-primary.button-primary--inactive(type="button") Inactive
                 tr
-                    td.customers-table__td Marvin McKinney
-                    td.customers-table__td Tesla
-                    td.customers-table__td (252) 555-0126
-                    td.customers-table__td marvin@tesla.com
-                    td.customers-table__td Iran
-                    td.customers-table__td
-                        span.status--active Active
+                    td.dashboard-table__td Ronald Richards
+                    td.dashboard-table__td Adobe
+                    td.dashboard-table__td (302) 555-0107
+                    td.dashboard-table__td ronald@adobe.com
+                    td.dashboard-table__td Israel
+                    td.dashboard-table__td
+                        button.button-primary.button-primary--inactive(type="button") Inactive
                 tr
-                    td.customers-table__td Jane Cooper
-                    td.customers-table__td Microsoft
-                    td.customers-table__td (225) 555-0118
-                    td.customers-table__td jane@microsoft.com
-                    td.customers-table__td United States
-                    td.customers-table__td
-                        span.status--active Active
+                    td.dashboard-table__td Marvin McKinney
+                    td.dashboard-table__td Tesla
+                    td.dashboard-table__td (252) 555-0126
+                    td.dashboard-table__td marvin@tesla.com
+                    td.dashboard-table__td Iran
+                    td.dashboard-table__td
+                        button.button-primary(type="button") Active
                 tr
-                    td.customers-table__td Floyd Miles
-                    td.customers-table__td Yahoo
-                    td.customers-table__td (205) 555-0100
-                    td.customers-table__td floyd@yahoo.com
-                    td.customers-table__td Kiribati
-                    td.customers-table__td
-                        span.status--inactive Inactive
+                    td.dashboard-table__td Jane Cooper
+                    td.dashboard-table__td Microsoft
+                    td.dashboard-table__td (225) 555-0118
+                    td.dashboard-table__td jane@microsoft.com
+                    td.dashboard-table__td United States
+                    td.dashboard-table__td
+                        button.button-primary(type="button") Active
                 tr
-                    td.customers-table__td Ronald Richards
-                    td.customers-table__td Adobe
-                    td.customers-table__td (302) 555-0107
-                    td.customers-table__td ronald@adobe.com
-                    td.customers-table__td Israel
-                    td.customers-table__td
-                        span.status--inactive Inactive
+                    td.dashboard-table__td Floyd Miles
+                    td.dashboard-table__td Yahoo
+                    td.dashboard-table__td (205) 555-0100
+                    td.dashboard-table__td floyd@yahoo.com
+                    td.dashboard-table__td Kiribati
+                    td.dashboard-table__td
+                        button.button-primary.button-primary--inactive(type="button") Inactive
                 tr
-                    td.customers-table__td Marvin McKinney
-                    td.customers-table__td Tesla
-                    td.customers-table__td (252) 555-0126
-                    td.customers-table__td marvin@tesla.com
-                    td.customers-table__td Iran
-                    td.customers-table__td
-                        span.status--active Active
+                    td.dashboard-table__td Ronald Richards
+                    td.dashboard-table__td Adobe
+                    td.dashboard-table__td (302) 555-0107
+                    td.dashboard-table__td ronald@adobe.com
+                    td.dashboard-table__td Israel
+                    td.dashboard-table__td
+                        button.button-primary.button-primary--inactive(type="button") Inactive
+                tr
+                    td.dashboard-table__td Marvin McKinney
+                    td.dashboard-table__td Tesla
+                    td.dashboard-table__td (252) 555-0126
+                    td.dashboard-table__td marvin@tesla.com
+                    td.dashboard-table__td Iran
+                    td.dashboard-table__td
+                        button.button-primary(type="button") Active
         include ../pagination.pug

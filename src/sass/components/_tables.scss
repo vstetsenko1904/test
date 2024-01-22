@@ -1,0 +1,59 @@
+// Tables
+
+// Dashboard table
+
+.dashboard-table {
+    & {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+    &__thead {
+        & {
+            position: relative;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: -40px;
+            bottom: 0;
+            border-bottom: 1px solid $color-gray-1;
+            width: calc(100% + 80px);
+        }
+    }
+
+    &__th {
+        padding: 14px 5px;
+        color: $color-gray-5;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.14px;
+    }
+
+    &__td {
+        padding: 20px 5px;
+        color: $color-gray-10;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.14px;
+        border-bottom: 1px solid $color-gray-1;
+    }
+
+    &__th,
+    &__td {
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+            text-align: center;
+        }
+    }
+
+    .button-primary {
+        min-width: 80px;
+    }
+}

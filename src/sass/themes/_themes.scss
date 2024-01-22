@@ -28,10 +28,16 @@ $container__box-shadow: 0px 10px 60px 0px rgb(226, 236, 249, .5);
 }
 
 .dashboard-container {
-    background: $color-white;
-    border-radius: 20px;
-    box-shadow: $container__box-shadow;
-    padding: 30px 40px 40px;
+    & {
+        background: $color-white;
+        border-radius: 20px;
+        box-shadow: $container__box-shadow;
+        padding: 30px 40px 40px;
+    }
+
+    .dashboard-table {
+        margin-bottom: 30px;
+    }
 }
 
 .user-welcome {
@@ -41,6 +47,8 @@ $container__box-shadow: 0px 10px 60px 0px rgb(226, 236, 249, .5);
 }
 
 .status-filter {
+    background: none;
+    padding: 0;
     color: $color-green-2;
     font-size: 14px;
     letter-spacing: -.14px;
@@ -51,7 +59,7 @@ $container__box-shadow: 0px 10px 60px 0px rgb(226, 236, 249, .5);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 30px;
+        margin-bottom: 26px;
     }
 
     .heading {
