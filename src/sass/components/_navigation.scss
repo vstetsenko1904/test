@@ -11,8 +11,8 @@ $navigation_link-active__background-color: $color-blue-1;
 
     &__list {
         padding: 0;
+        margin: 0 0 30px;
         list-style: none;
-        margin-bottom: 30px;
     }
 
     &__item {
@@ -85,15 +85,30 @@ $navigation_link-active__background-color: $color-blue-1;
 
 @include lt {
     .navigation {
-        display: none;
-        position: absolute;
-        z-index: 1;
-        right: -280px;
-        top: 50px;
-        width: 280px;
-        background-color: $color-white;
-        border: 1px solid $color-gray-3;
-        padding: 15px 20px;
+        & {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            top: 50px;
+            width: 280px;
+            background-color: $color-white;
+            border: 1px solid $color-gray-3;
+            padding: 15px 20px;
+            box-shadow: $container__box-shadow;
+        }
+
+        &__list {
+            margin-bottom: 0;
+        }
+
+        &__item {
+            margin-bottom: 2px;
+        }
+
+        &--active-mobile {
+            display: block;
+        }
     }
 
     .mobilemenu-toggler {

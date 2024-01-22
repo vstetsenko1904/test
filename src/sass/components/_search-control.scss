@@ -38,3 +38,14 @@
         }
     }
 }
+
+// Mobile -
+
+@include md {
+    .search-control {
+        &,
+        &__input {
+            width: 100%;
+        }
+    }
+}

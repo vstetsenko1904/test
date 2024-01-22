@@ -28,7 +28,7 @@
         & {
             display: inline-block;
             vertical-align: top;
-            padding: 5px 2px;
+            padding: 6px 2px;
             text-align: center;
             height: 24px;
             min-width: 26px;
@@ -77,6 +77,26 @@
     .pagination {
         &__info {
             font-size: 12px;
+        }
+    }
+}
+
+// Tablet XL -
+
+@include md {
+    .pagination {
+        & {
+            flex-direction: column;
+        }
+
+        &__info {
+            margin-bottom: 15px;
+        }
+
+        &__item {
+            &:last-child {
+                margin-left: 0;
+            }
         }
     }
 }
