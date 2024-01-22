@@ -1,0 +1,25 @@
+// User info
+
+.user-info {
+    & {
+        display: flex;
+        margin-bottom: 39px;
+    }
+        
+    &__avatar {
+        width: 42px;
+        margin-right: 12px;
+    }
+
+    &__name {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: .14px;
+    }
+
+    &__post {
+        color: $color-gray-8;
+        font-size: 12px;
+        letter-spacing: .12px;
+    }
+}

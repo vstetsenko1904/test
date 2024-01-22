@@ -3,13 +3,15 @@ include ../mixins.pug
 section.main-section
     .user-welcome Hello Evano 👋🏼,
     .dashboard-container
-        h1 #{title}
-        .status.status--active Active Member
-        .search-control
-            form(action="#")
-                label(for="search")
-                    +icon('search')
-                input#search.search-control__input(type="text", name="search")
+        .dashboard-controls
+            .heading-filter
+                h1.heading.heading--h1 #{title}
+                .status-filter Active Member
+            .search-control
+                form(action="#")
+                    label.search-control__label(for="search")
+                        +icon('search', 'search-control__icon')
+                    input#search.search-control__input(type="text", name="search", placeholder="Search")
 
         table.customers-table
             thead
@@ -28,7 +30,7 @@ section.main-section
                     td.customers-table__td jane@microsoft.com
                     td.customers-table__td United States
                     td.customers-table__td
-                        button.button-status--active Active
+                        span.status--active Active
                 tr
                     td.customers-table__td Floyd Miles
                     td.customers-table__td Yahoo
@@ -36,7 +38,7 @@ section.main-section
                     td.customers-table__td floyd@yahoo.com
                     td.customers-table__td Kiribati
                     td.customers-table__td
-                        button.button-status--inactive Inactive
+                        span.status--inactive Inactive
                 tr
                     td.customers-table__td Ronald Richards
                     td.customers-table__td Adobe
@@ -44,7 +46,7 @@ section.main-section
                     td.customers-table__td ronald@adobe.com
                     td.customers-table__td Israel
                     td.customers-table__td
-                        button.button-status--inactive Inactive
+                        span.status--inactive Inactive
                 tr
                     td.customers-table__td Marvin McKinney
                     td.customers-table__td Tesla
@@ -52,7 +54,7 @@ section.main-section
                     td.customers-table__td marvin@tesla.com
                     td.customers-table__td Iran
                     td.customers-table__td
-                        button.button-status--active Active
+                        span.status--active Active
                 tr
                     td.customers-table__td Jane Cooper
                     td.customers-table__td Microsoft
@@ -60,7 +62,7 @@ section.main-section
                     td.customers-table__td jane@microsoft.com
                     td.customers-table__td United States
                     td.customers-table__td
-                        button.button-status--active Active
+                        span.status--active Active
                 tr
                     td.customers-table__td Floyd Miles
                     td.customers-table__td Yahoo
@@ -68,7 +70,7 @@ section.main-section
                     td.customers-table__td floyd@yahoo.com
                     td.customers-table__td Kiribati
                     td.customers-table__td
-                        button.button-status--inactive Inactive
+                        span.status--inactive Inactive
                 tr
                     td.customers-table__td Ronald Richards
                     td.customers-table__td Adobe
@@ -76,7 +78,7 @@ section.main-section
                     td.customers-table__td ronald@adobe.com
                     td.customers-table__td Israel
                     td.customers-table__td
-                        button.button-status--inactive Inactive
+                        span.status--inactive Inactive
                 tr
                     td.customers-table__td Marvin McKinney
                     td.customers-table__td Tesla
@@ -84,5 +86,5 @@ section.main-section
                     td.customers-table__td marvin@tesla.com
                     td.customers-table__td Iran
                     td.customers-table__td
-                        button.button-status--active Active
+                        span.status--active Active
         include ../pagination.pug

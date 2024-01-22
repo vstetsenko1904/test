@@ -5,6 +5,10 @@ $navigation_link__color: $color-blue-2;
 $navigation_link-active__background-color: $color-blue-1;
 
 .navigation {
+    & {
+        flex: 1;
+    }
+
     &__list {
         margin-bottom: 30px;
     }
@@ -44,6 +48,10 @@ $navigation_link-active__background-color: $color-blue-1;
 
         &--active .icon {
             fill: $color-white;
+        }
+
+        &--active:hover .icon {
+            fill: $color-black;
         }
     }
 

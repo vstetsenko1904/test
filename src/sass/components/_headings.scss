@@ -1,0 +1,20 @@
+// Headings
+
+.heading {
+    & {
+        font-weight: 600;
+        letter-spacing: -0.22px;
+    }
+
+    &--h1 {
+        font-size: $heading-h1__font-size;
+    }
+
+    &--h2 {
+        font-size: $heading-h2__font-size;
+    }
+
+    &--h3 {
+        font-size: $heading-h3__font-size;
+    }
+}

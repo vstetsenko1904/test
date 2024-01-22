@@ -2,17 +2,21 @@
 <section class="main-section">
   <div class="user-welcome">Hello Evano 👋🏼,</div>
   <div class="dashboard-container">
-    <h1></h1>
-    <div class="status status--active">Active Member</div>
-    <div class="search-control">
-      <form action="#">
-        <label for="search">
-          <svg class="icon icon-search ">
-            <use xlink:href="images/svg/sprite.svg#search"></use>
-          </svg>
-        </label>
-        <input class="search-control__input" id="search" type="text" name="search"/>
-      </form>
+    <div class="dashboard-controls">
+      <div class="heading-filter">
+        <h1 class="heading heading--h1"></h1>
+        <div class="status-filter">Active Member</div>
+      </div>
+      <div class="search-control">
+        <form action="#">
+          <label class="search-control__label" for="search">
+            <svg class="icon icon-search search-control__icon">
+              <use xlink:href="images/svg/sprite.svg#search"></use>
+            </svg>
+          </label>
+          <input class="search-control__input" id="search" type="text" name="search" placeholder="Search"/>
+        </form>
+      </div>
     </div>
     <table class="customers-table">
       <thead>
@@ -32,9 +36,7 @@
           <td class="customers-table__td">(225) 555-0118</td>
           <td class="customers-table__td">jane@microsoft.com</td>
           <td class="customers-table__td">United States</td>
-          <td class="customers-table__td">
-            <button class="button-status--active">Active</button>
-          </td>
+          <td class="customers-table__td"><span class="status--active">Active</span></td>
         </tr>
         <tr>
           <td class="customers-table__td">Floyd Miles</td>
@@ -42,9 +44,7 @@
           <td class="customers-table__td">(205) 555-0100</td>
           <td class="customers-table__td">floyd@yahoo.com</td>
           <td class="customers-table__td">Kiribati</td>
-          <td class="customers-table__td">
-            <button class="button-status--inactive">Inactive</button>
-          </td>
+          <td class="customers-table__td"><span class="status--inactive">Inactive</span></td>
         </tr>
         <tr>
           <td class="customers-table__td">Ronald Richards</td>
@@ -52,9 +52,7 @@
           <td class="customers-table__td">(302) 555-0107</td>
           <td class="customers-table__td">ronald@adobe.com</td>
           <td class="customers-table__td">Israel</td>
-          <td class="customers-table__td">
-            <button class="button-status--inactive">Inactive</button>
-          </td>
+          <td class="customers-table__td"><span class="status--inactive">Inactive</span></td>
         </tr>
         <tr>
           <td class="customers-table__td">Marvin McKinney</td>
@@ -62,9 +60,7 @@
           <td class="customers-table__td">(252) 555-0126</td>
           <td class="customers-table__td">marvin@tesla.com</td>
           <td class="customers-table__td">Iran</td>
-          <td class="customers-table__td">
-            <button class="button-status--active">Active</button>
-          </td>
+          <td class="customers-table__td"><span class="status--active">Active</span></td>
         </tr>
         <tr>
           <td class="customers-table__td">Jane Cooper</td>
@@ -72,9 +68,7 @@
           <td class="customers-table__td">(225) 555-0118</td>
           <td class="customers-table__td">jane@microsoft.com</td>
           <td class="customers-table__td">United States</td>
-          <td class="customers-table__td">
-            <button class="button-status--active">Active</button>
-          </td>
+          <td class="customers-table__td"><span class="status--active">Active</span></td>
         </tr>
         <tr>
           <td class="customers-table__td">Floyd Miles</td>
@@ -82,9 +76,7 @@
           <td class="customers-table__td">(205) 555-0100</td>
           <td class="customers-table__td">floyd@yahoo.com</td>
           <td class="customers-table__td">Kiribati</td>
-          <td class="customers-table__td">
-            <button class="button-status--inactive">Inactive</button>
-          </td>
+          <td class="customers-table__td"><span class="status--inactive">Inactive</span></td>
         </tr>
         <tr>
           <td class="customers-table__td">Ronald Richards</td>
@@ -92,9 +84,7 @@
           <td class="customers-table__td">(302) 555-0107</td>
           <td class="customers-table__td">ronald@adobe.com</td>
           <td class="customers-table__td">Israel</td>
-          <td class="customers-table__td">
-            <button class="button-status--inactive">Inactive</button>
-          </td>
+          <td class="customers-table__td"><span class="status--inactive">Inactive</span></td>
         </tr>
         <tr>
           <td class="customers-table__td">Marvin McKinney</td>
@@ -102,9 +92,7 @@
           <td class="customers-table__td">(252) 555-0126</td>
           <td class="customers-table__td">marvin@tesla.com</td>
           <td class="customers-table__td">Iran</td>
-          <td class="customers-table__td">
-            <button class="button-status--active">Active</button>
-          </td>
+          <td class="customers-table__td"><span class="status--active">Active</span></td>
         </tr>
       </tbody>
     </table>
