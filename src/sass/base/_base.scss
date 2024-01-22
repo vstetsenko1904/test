@@ -4,20 +4,7 @@
     box-sizing: border-box;
 }
 
-blockquote,
-body,
-dd,
-dl,
-figcaption,
-figure,
-h1,
-h2,
-h3,
-h4,
-li,
-ol,
-p,
-ul {
+body {
     margin: 0;
 }
 
@@ -26,18 +13,13 @@ html {
 }
 
 body {
-    font-family: 'HelveticaNeue';
+    font-family: $font-primary;
     font-weight: 400;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    overflow-x: hidden;
     height: 100%;
-}
-
-ol,
-ul {
-    padding: 0;
-    list-style: none;
+    color: $text-color;
+    margin: 0;
 }
 
 a {

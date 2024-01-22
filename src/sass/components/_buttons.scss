@@ -1,0 +1,28 @@
+// Buttons
+
+.button-primary {
+    & {
+        padding: 4px 12px;
+        border-radius: 4px;
+        color: $color-green-1;
+        border: 1px solid $color-green-3;
+        background-color: $color-green-4;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.14px;
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+
+    &:active {
+        outline: inset 1px;
+    }
+
+    &--inactive {
+        background-color: $color-light-red;
+        color: $color-red;
+        border-color: $color-red;
+    }
+}

@@ -1,0 +1,51 @@
+// Search control
+
+.search-control {
+    & {
+        position: relative;
+    }
+
+    &__label {
+        position: absolute;
+        left: 8px;
+        top: 7px;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: $color-gray-6;
+    }
+
+    &__input {
+        & {
+            width: 216px;
+            height: 38px;
+            border-radius: 10px;
+            background: $color-gray-3;
+            border: 0;
+            padding: 10px 15px 10px 40px;
+            font-size: 12px;
+            letter-spacing: -0.12px;
+        }
+
+        &:focus {
+            outline: solid 1px $color-gray-5;
+        }
+
+        &::placeholder {
+            color: $color-gray-5;
+        }
+    }
+}
+
+// Mobile -
+
+@include md {
+    .search-control {
+        &,
+        &__input {
+            width: 100%;
+        }
+    }
+}

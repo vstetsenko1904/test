@@ -1,0 +1,53 @@
+// User info
+
+.user-info {
+    & {
+        display: flex;
+        margin-bottom: 39px;
+    }
+        
+    &__avatar {
+        width: 42px;
+        height: 42px;
+        margin-right: 12px;
+    }
+
+    &__name {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: .14px;
+    }
+
+    &__post {
+        color: $color-gray-8;
+        font-size: 12px;
+        letter-spacing: .12px;
+    }
+}
+
+// Tablet L -
+
+@include lt {
+    .user-info {
+        & {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Tablet M -
+
+@include md {
+    .user-info {
+        &__name,
+        &__post {
+            display: none;
+        }
+
+        &__avatar {
+            width: 32px;
+            height: 32px;
+            margin-right: 0;
+        }
+    }
+}

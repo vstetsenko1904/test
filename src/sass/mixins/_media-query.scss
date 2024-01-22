@@ -1,0 +1,24 @@
+// Media Query
+
+// For X-Large Tablets
+@mixin xlt{
+    @media only screen and (max-width: $screen-xl){
+        @content;
+    }
+}
+
+// For Large Tablets
+@mixin lt{
+    @media only screen and (max-width: $screen-l){
+        @content;
+    }
+}
+
+// For Mobile Devices
+@mixin md{
+    @media only screen and (max-width: $screen-m){
+        @content;
+    }
+}
+
+// Example @include md{background-color: blue;}
