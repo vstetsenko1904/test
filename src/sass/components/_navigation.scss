@@ -1,0 +1,129 @@
+// Navigation
+
+$navigation_link__padding: 11px;
+$navigation_link__color: $color-blue-2;
+$navigation_link-active__background-color: $color-blue-1;
+
+.navigation {
+    & {
+        flex: 1;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0 0 30px;
+        list-style: none;
+    }
+
+    &__item {
+        margin-bottom: 18px;
+    }
+
+    &__link {
+        & {
+            position: relative;
+            display: flex;
+            padding: $navigation_link__padding;
+            color: $navigation_link--color;
+            line-height: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -.14px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color .25s;
+        }
+
+        &:hover {
+            color: $color-black;
+        }
+
+        &:hover .icon {
+            fill: $color-black;
+            transition: fill .25s;
+        }
+
+        &--active,
+        &--active:hover {
+            background-color: $navigation_link-active__background-color;
+            color: $color-white;
+        }
+
+        &--active .icon {
+            fill: $color-white;
+        }
+
+        &--active:hover .icon {
+            fill: $color-white;
+        }
+    }
+
+    &__link-arrow {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        fill: $navigation_link--color;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 14px;
+        fill: $navigation_link--color;
+    }
+}
+
+.mobilemenu-toggler {
+    display: none;
+}
+
+
+// Tablet L -
+
+@include lt {
+    .navigation {
+        & {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            top: 50px;
+            width: 280px;
+            background-color: $color-white;
+            border: 1px solid $color-gray-3;
+            padding: 15px 20px;
+            box-shadow: $container__box-shadow;
+        }
+
+        &__list {
+            margin-bottom: 0;
+        }
+
+        &__item {
+            margin-bottom: 2px;
+        }
+
+        &--active-mobile {
+            display: block;
+        }
+    }
+
+    .mobilemenu-toggler {
+        & {
+            background: none;
+            padding: 0;
+            display: block;
+            order: 1;
+            margin-left: 20px;
+        }
+
+        &__icon {
+            width: 32px;
+            height: 32px;
+            color: $color-black;
+        }
+    }
+}

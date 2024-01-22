@@ -4,11 +4,14 @@ const pug = require('gulp-pug');
 const svgSprite = require('gulp-svg-sprite');
 const svgmin = require('gulp-svgmin');
 const cheerio = require('gulp-cheerio');
-const replace = require('gulp-replace')
+const replace = require('gulp-replace');
+const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function(done) {
     gulp.src('./src/sass/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/css'));
 });
 
@@ -32,6 +35,7 @@ gulp.task('svg', function(done) {
     .pipe(cheerio({
         run: function ($) {
             $('[fill]').removeAttr('fill');
+            $('[stroke]').removeAttr('stroke');
             $('[style]').removeAttr('style');
         },
         parserOptions: { xmlMode: true }
@@ -47,23 +51,6 @@ gulp.task('svg', function(done) {
         }
     }))
     .pipe(gulp.dest('dist/images/svg/'));
-});
-
-gulp.task('svgSpriteSass', function () {
-    return gulp.src(assetsDir + 'i/icons/*.svg')
-        .pipe(svgSprite({
-                preview: false,
-                selector: "icon-%f",
-                svg: {
-                    sprite: 'svg_sprite.html'
-                },
-                cssFile: '../sass/_svg_sprite.scss',
-                templates: {
-                    css: require("fs").readFileSync(assetsDir + 'sass/templates/_sprite-template.scss', "utf-8")
-                }
-            }
-        ))
-        .pipe(gulp.dest(assetsDir + 'i/'));
 });
 
 gulp.task('watch', function() {
