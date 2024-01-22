@@ -27,22 +27,22 @@
     &__th {
         padding: 14px 5px;
         color: $color-gray-5;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: -0.14px;
     }
 
     &__td {
         padding: 20px 5px;
         color: $color-gray-10;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: -0.14px;
         border-bottom: 1px solid $color-gray-1;
     }
 
     &__th,
     &__td {
+        & {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -0.14px;
+        }
+
         &:first-child {
             padding-left: 0;
         }
@@ -56,5 +56,16 @@
 
     .button-primary {
         min-width: 80px;
+    }
+}
+
+// Tablet XL -
+
+@include xlt {
+    .dashboard-table {
+        &__th,
+        &__td {
+            font-size: 12px;
+        }
     }
 }

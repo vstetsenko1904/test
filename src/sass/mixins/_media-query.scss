@@ -1,33 +1,24 @@
 // Media Query
 
-// For Small Devices (Mobile Devices)
-@mixin sm{
-    @media only screen and (min-width: $screen-sm){
+// For X-Large Tablets
+@mixin xlt{
+    @media only screen and (max-width: $screen-xl){
         @content;
     }
 }
 
-// For Medium Devices (iPads)
+// For Large Tablets
+@mixin lt{
+    @media only screen and (max-width: $screen-l){
+        @content;
+    }
+}
+
+// For Mobile Devices
 @mixin md{
-    @media only screen and (min-width: $screen-md){
+    @media only screen and (max-width: $screen-m){
         @content;
     }
 }
 
-// For Large Devices (Tablets, Small screens)
-@mixin lg{
-    @media only screen and (min-width: $screen-lg){
-        @content;
-    }
-}
-
-// Extra Large Devices (Desktops, laptops)
-@mixin xl{
-    @media only screen and (min-width: $screen-xl){
-        @content;
-    }
-}
-
-
-// To use this function, use @include to call it
-// Example @include lg{background-color: blue;}
+// Example @include md{background-color: blue;}

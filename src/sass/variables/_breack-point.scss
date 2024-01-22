@@ -1,13 +1,10 @@
-// Break Point 
+// Break Point (Desktop first)
 
-// For Small Devices (Mobile Devices)
-$screen-sm: 320px;
-
-// For Medium Devices (iPads)
-$screen-md: 768px;
-
-// For Large Devices (Tablets, Small screens)
-$screen-lg: 960px;
-
-// Extra Large Devices (Desktops, laptops)
+// For Large Tablets
 $screen-xl: 1200px;
+
+// For Medium Tablets
+$screen-l: 940px;
+
+// For Mobile Devices (Mobile Devices)
+$screen-m: 767px;

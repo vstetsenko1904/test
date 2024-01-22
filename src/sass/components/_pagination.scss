@@ -70,3 +70,13 @@
         letter-spacing: -0.14px;
     }
 }
+
+// Tablet XL -
+
+@include xlt {
+    .pagination {
+        &__info {
+            font-size: 12px;
+        }
+    }
+}

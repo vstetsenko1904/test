@@ -31,3 +31,25 @@
         margin-top: 9px;
     }
 }
+
+// Tablet L -
+
+@include lt {
+    .logo {
+        & {
+            margin-bottom: 0;
+        }
+
+        &__text {
+            font-size: 22px;
+        }
+
+        &--sidebar-top {
+            margin-bottom: 0;
+        }
+
+        &__version {
+            margin-top: 7px;
+        }
+    }
+}

@@ -75,3 +75,40 @@ $navigation_link-active__background-color: $color-blue-1;
         fill: $navigation_link--color;
     }
 }
+
+.mobilemenu-toggler {
+    display: none;
+}
+
+
+// Tablet L -
+
+@include lt {
+    .navigation {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        right: -280px;
+        top: 50px;
+        width: 280px;
+        background-color: $color-white;
+        border: 1px solid $color-gray-3;
+        padding: 15px 20px;
+    }
+
+    .mobilemenu-toggler {
+        & {
+            background: none;
+            padding: 0;
+            display: block;
+            order: 1;
+            margin-left: 20px;
+        }
+
+        &__icon {
+            width: 32px;
+            height: 32px;
+            color: $color-black;
+        }
+    }
+}
